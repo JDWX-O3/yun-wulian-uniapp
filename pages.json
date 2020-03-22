@@ -1,0 +1,147 @@
+{
+	"pages": [ /*pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages*/		
+		{
+			"path": "pages/advert/advert",
+			"style": {
+				"navigationBarTitleText": "金大万翔物联网管理平台"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "金大万翔物联网管理平台"
+			}
+		},
+		{
+			"path": "pages/category/category",
+			"style": {
+				"navigationBarTitleText": "验证登录"
+			}
+		}
+		, {
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		}
+		, {
+			"path": "pages/register/register",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		}, {
+			"path": "pages/forget/forget",
+			"style": {
+				"navigationBarTitleText": "找回密码"
+			}
+		}, {
+			"path": "pages/comment/comment",
+			"style": {
+				"navigationBarTitleText": "日志列表"
+			}
+			
+		}, {
+			"path": "pages/infomation/infomation",
+			"style": {
+				"navigationBarTitleText": "修改信息"
+			}
+		}, {
+			"path": "pages/favorites/favorites",
+			"style": {
+				"navigationBarTitleText": "我的报修"
+			}
+		}, {
+			"path": "pages/save/save",
+			"style": {
+				"navigationBarTitleText": "安全中心"
+			}
+		}, {
+			"path": "pages/save/setEmail",
+			"style": {
+				"navigationBarTitleText": "绑定邮箱"
+			}
+		}, {
+			"path": "pages/save/setMobile",
+			"style": {
+				"navigationBarTitleText": "绑定手机号"
+			}
+		}, {
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "搜索",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/about/about",
+			"style": {
+				"navigationBarTitleText": "关于我们"
+			}
+		}
+	    ,{
+            "path" : "pages/scanrepaire/scanrepaire",
+			"style": {
+				"navigationBarTitleText": "设备报修"
+			}
+		}       
+        ,{
+            "path" : "pages/my_home/my_home",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+        }
+        ,{
+            "path" : "pages/my_data/my_data",
+			"style": {
+				"navigationBarTitleText": "数据"
+			}
+        }
+        ,{
+            "path" : "pages/yuntopo/xianning_ctrl/xianning_ctrl",
+			"style": {
+				"navigationBarTitleText": "污水处理设施"
+			}
+        }
+        ,{
+            "path" : "pages/yuntopo/webview/webview",
+            "style" : {}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "金大万翔物联网管理平台",
+		"navigationBarBackgroundColor": "#F1F2F3",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#000000",
+		"borderStyle": "black",
+		"backgroundColor": "#F1F2F3",
+		"list": [
+			{
+				"pagePath": "pages/my_home/my_home",
+				"iconPath": "static/home.png",
+				"selectedIconPath": "static/home_selected.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/my_data/my_data",
+				"iconPath": "static/fl.png",
+				"selectedIconPath": "static/fl_selected.png",
+				"text": "数据"
+			},
+			{
+				"pagePath": "pages/comment/comment",
+				"iconPath": "static/daily.png",
+				"selectedIconPath": "static/daily-active.png",
+				"text": "日志"
+			},
+			{
+				"pagePath": "pages/user/user",
+				"iconPath": "static/my.png",
+				"selectedIconPath": "static/my_selected.png",
+				"text": "我的"
+			}
+		]
+	}
+}
