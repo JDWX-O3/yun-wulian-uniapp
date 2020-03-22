@@ -80,7 +80,7 @@
 			uni.setStorageSync('cookie', "programmer=test")
 			uni.setStorageSync('token', "czj")
 			uni.setStorageSync('current_project_name', "");
-			uni.setStorageSync('current_device_name', "");
+			uni.setStorageSync('current_dev_cn_name', "");
 			uni.setStorageSync('current_devunit_name', "");
 			uni.setStorageSync('cookie', "");
 			uni.setStorageSync('relogin', "");

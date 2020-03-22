@@ -14,8 +14,9 @@ var device_type = 'wxapp'
 var app = getApp();
 //必须的是https的协议才行，使用http调试是可以的，但关闭调试开关后，将无法登录
 //var host = "https://yun.jdwanxiang.com";//替换为自己的域名,小程序需要https
-//var host = "https://dsjiaqi.cn";//替换为自己的域名,小程序需要https
-var host = "http://localhost";//替换为自己的域名,小程序需要https
+//因为ssl证书绑定了域名dsjiaqi.cn，所以配置如下
+var host = "https://dsjiaqi.cn";//替换为自己的域名,小程序需要https
+//var host = "http://localhost";//替换为自己的域名,小程序需要https
 
 module.exports = {	
 	HOST: host,

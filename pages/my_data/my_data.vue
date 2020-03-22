@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<!-- 一般用法 -->
-		<cmd-cell-item @click="handleSelectClick" :title="current_device_name" addon="切换" arrow></cmd-cell-item>
+		<cmd-cell-item @click="handleSelectClick" :title="current_dev_cn_name" addon="切换" arrow></cmd-cell-item>
 		<view v-for="(item, index) in real_data_list" :key="index">
 			<cmd-cell-item @click="handleVarItemClick(index)" :title="item.varName" :addon="item.varValue" arrow></cmd-cell-item>
 		</view>
@@ -13,7 +13,7 @@
 			<!-- 一般用法 -->
 			<uni-list>
 				<view v-for="(item, index) in device_list" :key="index">
-					<uni-list-item @click="handleDeviceClick(index)"  :title="item.device_name"></uni-list-item>
+					<uni-list-item @click="handleDeviceClick(index)"  :title="item.dev_cn_name"></uni-list-item>
 				</view>
 			</uni-list>
 			<view class="close">
@@ -40,7 +40,7 @@
 				loading: false,
 				project_list: [],
 				device_list: [],
-				current_device_name:'',
+				current_dev_cn_name:'',
 				current_devunit_name:'',
 				current_project_name:'',
 				
@@ -72,7 +72,7 @@
 			var  old_name = this.current_devunit_name;
 			//获取当前设备及项目名, 设备名称
 			this.current_project_name = uni.getStorageSync('current_project_name');
-			this.current_device_name = uni.getStorageSync('current_device_name');
+			this.current_dev_cn_name = uni.getStorageSync('current_dev_cn_name');
 			//获取当前设备及项目名, 设备名称
 			this.current_devunit_name = uni.getStorageSync('current_devunit_name');
 			
@@ -198,8 +198,8 @@
 	
 				//更新默认设备
 				this.current_devunit_name = this.device_list[device_list_id].devunit_name;
-				this.current_device_name = this.device_list[device_list_id].device_name;
-				uni.setStorageSync('current_device_name', this.current_device_name);
+				this.current_dev_cn_name = this.device_list[device_list_id].dev_cn_name;
+				uni.setStorageSync('current_dev_cn_name', this.current_dev_cn_name);
 				uni.setStorageSync('current_devunit_name', this.current_devunit_name);
 				
 				this.closeDrawer();

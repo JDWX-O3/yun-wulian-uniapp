@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="image_gzh">
-			 <text style="font-size:40upx">{{device_name}}</text>
+			 <text style="font-size:40upx">{{dev_cn_name}}</text>
 		</view>
 		<image mode="aspectFit" :src="topo_src" style="width: 100%;"  />
 		<!--
@@ -39,7 +39,7 @@
 				run_status_string: "停止",
 				gateway_sn:"",
 				devunit_name:"",
-				device_name:"",
+				dev_cn_name:"",
 				devunit_id:10000,
 				send_fail_count:0,
 				real_data_list: [],
@@ -58,7 +58,7 @@
 			this.gateway_sn = option['gateway_sn'];
 			this.devunit_name = option['devunit_name'];
 			this.devunit_id = option['devunit_id'];
-			this.device_name = option['device_name'];
+			this.dev_cn_name = option['dev_cn_name'];
 			
 			//console.log("[topo], gateway_sn", this.gateway_sn);
 			//console.log("[topo], devunit_name", this.devunit_name);

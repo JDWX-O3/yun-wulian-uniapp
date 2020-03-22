@@ -16,13 +16,13 @@
                     </uni-grid-item>
                     <uni-grid-item v-for="(item, id) in device_list" :index="id">
 						<image src="../../static/zy-grid/grid-02.svg" class="grid-item" />
-                        <text class="text">"item.device_name"</text>
+                        <text class="text">"item.dev_cn_name"</text>
                     </uni-grid-item>
 					 -->
 					<view v-for="(item, index) in device_list" :key="index">
 						<uni-grid-item :index="index">
 							<image src="../../static/zy-grid/grid-02.svg" class="grid-item" />
-							<text class="text">{{item.device_name}}</text>
+							<text class="text">{{item.dev_cn_name}}</text>
 							<text class="text">{{item.gateway_sn}}</text>
 						</uni-grid-item>
 					</view>
@@ -76,7 +76,7 @@ export default {
 			user_account:'',
 			project_list: [],
 			device_list: [],
-			current_device_name:'',
+			current_dev_cn_name:'',
 			current_devunit_name:'',
 			current_project_name:'',
 			onload_flag:false,
@@ -91,7 +91,7 @@ export default {
 		console.log("[my_home] onLoad...., user_account:", this.user_account);
 		
 		uni.setStorageSync('current_project_name', "");
-		uni.setStorageSync('current_device_name', "");
+		uni.setStorageSync('current_dev_cn_name', "");
 		uni.setStorageSync('current_devunit_name', "");
 			
 
@@ -127,9 +127,9 @@ export default {
 			this.closeDrawer();
 			
 			//获取当前设备及项目名, 设备名称
-			var temp = uni.getStorageSync('current_device_name');
-			if (this.current_device_name != temp){
-				this.current_device_name = temp;
+			var temp = uni.getStorageSync('current_dev_cn_name');
+			if (this.current_dev_cn_name != temp){
+				this.current_dev_cn_name = temp;
 			}
 			
 			//获取当前设备及项目名, 设备名称
@@ -230,11 +230,11 @@ export default {
 						//保存当前设备的名称
 						uni.setStorageSync('current_project', project_name);
 						if (this.device_list.length >0){
-							uni.setStorageSync('current_device_name', this.device_list[0].device_name);
+							uni.setStorageSync('current_dev_cn_name', this.device_list[0].dev_cn_name);
 							uni.setStorageSync('current_devunit_name', this.device_list[0].devunit_name);
 						}
 						else{
-							uni.setStorageSync('current_device_name', "")
+							uni.setStorageSync('current_dev_cn_name', "")
 							uni.setStorageSync('current_devunit_name', "")
 						}
 						console.log("[my_home] device_list", this.device_list);
@@ -291,7 +291,7 @@ export default {
 			}
 			
 			//更新默认设备
-			uni.setStorageSync('current_device_name', this.device_list[device_list_id].device_name);
+			uni.setStorageSync('current_dev_cn_name', this.device_list[device_list_id].dev_cn_name);
 			uni.setStorageSync('current_devunit_name', this.device_list[device_list_id].devunit_name);
 			
 			uni.navigateTo({
@@ -299,7 +299,7 @@ export default {
 			+'&devunit_name='+this.device_list[device_list_id].devunit_name
 			+'&devunit_id='+this.device_list[device_list_id].devunit_id
 			+'&gateway_sn='+this.device_list[device_list_id].gateway_sn
-			+'&device_name='+this.device_list[device_list_id].device_name
+			+'&dev_cn_name='+this.device_list[device_list_id].dev_cn_name
 			});
 	
 		},
