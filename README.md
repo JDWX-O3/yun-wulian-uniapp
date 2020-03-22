@@ -1,8 +1,8 @@
-# uni-template-one
+# yun-wulian-uniapp
 
-> 使用uni-app开发的 [「ONE · 一个」](http://wufazhuce.com)  
+> 使用uni-app开发的app，对应金大万翔物联网平台
 > 移植自[mpvue-one](https://github.com/feng-fu/mpvue-one/blob/master/README.md)  
-> 本项目仅作为mpvue项目移植示例  
+> 本项目内部使用
 
 ## 预览
 
