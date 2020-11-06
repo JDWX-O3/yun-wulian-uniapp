@@ -2,6 +2,7 @@
 
 > 使用uni-app开发的app，对应金大万翔物联网平台
 > 移植自[mpvue-one](https://github.com/feng-fu/mpvue-one/blob/master/README.md)  
+> uni-app参考： https://uniapp.dcloud.io/
 > 本项目内部使用
 
 ## 预览
